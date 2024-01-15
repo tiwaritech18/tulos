@@ -1,0 +1,26 @@
+.shop-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  place-items: center;
+  margin: 3em 0;
+}
+@media (min-width: 758px) {
+  .shop-category {
+    row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1025px) {
+  .shop-category {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 758px) {
+  .shop-category-container {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}/*# sourceMappingURL=ShopCategory.css.map */

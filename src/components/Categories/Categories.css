@@ -1,0 +1,52 @@
+.categories-container {
+  margin-bottom: 120px;
+  display: flex;
+  gap: 25px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.categories-container .categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1em;
+}
+@media (min-width: 758px) {
+  .categories-container .categories {
+    flex-direction: row;
+  }
+}
+
+.category {
+  height: 400px;
+  border-radius: 15px;
+  transition: all 0.3s linear;
+}
+.category:hover {
+  scale: 1.1;
+}
+.category .category-banner {
+  height: 100%;
+  position: relative;
+}
+.category .category-banner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.95;
+  height: 100%;
+}
+
+.category-button {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  text-align: left;
+}
+.category-button h1 {
+  font-size: 40px;
+}
+.category-button .detail-btn {
+  padding: 7px 24px;
+}/*# sourceMappingURL=Categories.css.map */

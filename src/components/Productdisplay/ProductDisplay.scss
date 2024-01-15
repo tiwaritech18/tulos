@@ -1,0 +1,170 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.product-container{
+    margin: 4em 0;
+    @include tablet{
+        display: flex;
+        gap:1rem;
+        .buttons{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    .product-img{
+        @include tablet{
+            display: flex;
+            // width: 100%;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: .5rem;
+        }
+        @include desktop{
+            width: 60%;
+        }
+        .main-img{
+            max-width: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            @include tablet{
+                max-width: 350px;
+            }
+            
+            @include desktop{
+                max-width: 450px;
+            }
+            
+        }
+        .product-alternate-imgs{
+            display: flex;
+            justify-content:center;
+            max-width: 100%;
+            gap: 6px;
+            align-items: center;
+            min-height: 70px;
+            @include tablet{
+                flex-direction: column;
+            }
+            
+            :nth-of-type(odd){
+                transform: scaleX(-1);
+                opacity: 0.85;
+            }
+            img{
+                height: 100%;
+                width: 70px;
+                border-radius: 10px;
+                object-fit: cover;
+                @include tablet{
+                    width: 82px;
+                }
+                @include desktop{
+                    width: 106px;
+                }
+            }
+        }
+    }
+    .product-detail-container{
+        display: flex;
+        justify-content: center;
+        .product-desc{
+            width: 100%;
+            max-width: 300px;
+            @include tablet{
+                max-width: 350px;
+            }
+        }
+        h3{
+            text-align: left;
+            padding-top: 1em;
+            font-size: 30px;
+            @include tablet{
+                font-size: 35px;
+                padding-top: 0;
+            }
+            @include desktop{
+                font-size: 38px;
+            }
+
+        }
+        p{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            text-align: left;
+            // width: 50%;
+            gap: 7px;
+            // justify-content:center;
+            align-items:flex-end ;
+            @include tablet{
+                gap: 15px;
+            }
+            .line-through{
+                text-decoration: line-through;
+                font-size: 12px;
+                color: gray;
+                @include tablet{
+                    font-size: 13px;
+                }
+                @include desktop{
+                    font-size: 14px;
+                }
+            }
+            .actual-price{
+                font-size: 18px;
+                color: black;
+                @include tablet{
+                    font-size: 19px;
+                }
+                @include desktop{
+                    font-size: 20px;
+                }
+            }
+            .offer{
+                background-color: black;
+                border-radius: 5px;
+                font-size: 10px;
+                padding: 2px 8px;
+                color: white;
+                @include tablet{
+                font-size: 11px;
+                padding: 3px 10px;
+                }
+            }
+        }
+        h5{
+            font-size: 15px;
+            display: flex;
+            text-align: left;
+            @include tablet{
+                font-size: 17px;
+            }
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+}.buttons{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    gap: 15px;
+    .add-to-cart{
+        background-color: rgba(231, 216, 216, 0.742);
+        // color: black;
+        color: rgb(181, 162, 162);
+        font-weight: 600;
+        padding: 7px 20px;
+        border: none;
+        &:hover{
+        border: 1px solid rgb(92, 87, 87);
+        color:black;
+        background-color: white;
+}
+    }
+    .checkout{
+        padding: 7px 20px;
+    }
+}

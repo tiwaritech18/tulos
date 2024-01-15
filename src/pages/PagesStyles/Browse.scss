@@ -1,0 +1,115 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.all-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    place-items: center;
+    margin: 3em 0;
+    @include minitablet{
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @include tablet{
+        gap: 25px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2em;
+        margin-left: 5em;
+    }
+}
+.browse-page{
+    @include tablet{
+        width: 100vw;
+        margin: 0 auto;
+        max-width: $max-width;
+    }
+}
+
+.search-input {
+    height: 150px;
+    background-image: url('../../components/Assets/search-background.webp');
+    background-position:top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fe507f;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .input {
+        position: relative;
+        width: fit-content;
+        input {
+            border-bottom:1px solid #fe507e57 ;
+            border-radius: 6px 6px 0 0 ;
+            background-color: rgb(234, 218, 218);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            padding: .6em 3em;
+            &:hover,&:active,&:focus{
+                border: none;
+                outline: none;
+            }
+            @include minitablet{
+            padding: .6em 5em;
+            text-align: left;
+        }
+      }
+  
+      svg {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+      }
+    }
+    
+  }
+  .page-header{
+    @include minitablet{   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3em;
+    }
+  }
+
+  .flex{
+    display: block;
+    @include minitablet{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    }
+  }
+
+  .noitems-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 40vh;
+}
+.noitems-p{
+    width: 100%;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    // Add animation or transition styles for a more polished look
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+}

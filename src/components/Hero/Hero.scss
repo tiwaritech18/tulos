@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+.hero {
+    background-image: url('../Assets/banner.webp');
+    backdrop-filter:inherit;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    // border-radius: 15px;
+    border: 1px solid rgba(177, 176, 176, 0.847);
+    overflow: hidden; /* Ensure the border-radius clips the image */
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // border: 1px solid;
+        height: 100%;
+        @include tablet{
+            position: relative;
+        }
+        .left-hero-content{
+            padding-top: 2em;
+            @include tablet{
+                position: absolute;
+                bottom: 150px;
+                left: 15px;
+            }
+            h2{
+                padding: 1em 0;
+                color:black;
+                font-size: 25px;
+                .alternate-heading{
+                    color: rgb(245, 80, 245);
+                }
+                @include tablet{
+                    padding: 0;
+                    text-align: left;
+                    font-size: 40px;
+                    letter-spacing: 2px;
+                }
+            }
+            p{
+            color: rgb(60, 61, 61);
+            font-weight: 500;
+            padding-top: 1em;
+            @include tablet{
+                font-size: 18px;
+                // width: 80%;
+                padding: 0;
+                text-align: left;
+            }
+        }
+    }
+    .right-hero-content{
+        // border: 1px solid;
+        .shop-btn{  
+            padding: 8px 30px;
+            @include tablet{
+                position: absolute;
+                left: 15px;
+                bottom: 120px;
+            }
+        }
+    }
+    }
+  }
+  

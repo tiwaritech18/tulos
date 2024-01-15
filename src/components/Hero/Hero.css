@@ -1,0 +1,70 @@
+.hero {
+  background-image: url("../Assets/banner.webp");
+  -webkit-backdrop-filter: inherit;
+          backdrop-filter: inherit;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  border: 1px solid rgba(177, 176, 176, 0.847);
+  overflow: hidden; /* Ensure the border-radius clips the image */
+}
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+@media (min-width: 758px) {
+  .hero .hero-content {
+    position: relative;
+  }
+}
+.hero .hero-content .left-hero-content {
+  padding-top: 2em;
+}
+@media (min-width: 758px) {
+  .hero .hero-content .left-hero-content {
+    position: absolute;
+    bottom: 150px;
+    left: 15px;
+  }
+}
+.hero .hero-content .left-hero-content h2 {
+  padding: 1em 0;
+  color: black;
+  font-size: 25px;
+}
+.hero .hero-content .left-hero-content h2 .alternate-heading {
+  color: rgb(245, 80, 245);
+}
+@media (min-width: 758px) {
+  .hero .hero-content .left-hero-content h2 {
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+}
+.hero .hero-content .left-hero-content p {
+  color: rgb(60, 61, 61);
+  font-weight: 500;
+  padding-top: 1em;
+}
+@media (min-width: 758px) {
+  .hero .hero-content .left-hero-content p {
+    font-size: 18px;
+    padding: 0;
+    text-align: left;
+  }
+}
+.hero .hero-content .right-hero-content .shop-btn {
+  padding: 8px 30px;
+}
+@media (min-width: 758px) {
+  .hero .hero-content .right-hero-content .shop-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 120px;
+  }
+}/*# sourceMappingURL=Hero.css.map */

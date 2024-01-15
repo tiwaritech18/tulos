@@ -1,0 +1,26 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.shop-category{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    place-items: center;
+    margin: 3em 0;
+    @include tablet{
+        row-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.shop-category-container{
+    @include tablet{
+        width: 90vw;
+        margin: 0 auto;
+        max-width: $max-width;
+    }
+}
+
+

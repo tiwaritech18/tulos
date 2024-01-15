@@ -1,0 +1,144 @@
+@import "../../styles/mixins";
+
+.sidebar{
+    display: flex;
+    gap: 5px;
+    margin-left: 5px;
+    font-family: poppins, "sans-serif";
+    @include tablet{
+      flex-direction: column;
+    }
+}
+.category-inputs {
+    display: flex;
+    flex-direction: row;
+
+    label {
+    font-weight: 500;
+    font-size: 12px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;    
+      color: rgb(137, 131, 131);
+  
+      input {
+        margin:0 5px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid rgb(245, 80, 245);
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+        &:checked,&:focus,&:hover {
+          border-color: rgb(245, 80, 245);
+          outline: 2px solid #023f1c;
+          outline-offset: -5px;
+        }
+        @include tablet{
+          appearance: auto;
+        }
+      }
+    }
+  }
+
+  .category-filter,.prices-filter{
+    background-color: black;
+    color: white; 
+    width: 100px;
+    position: relative;
+    @include tablet{
+      background: transparent;
+      color: black;
+      width: 150px;
+    }
+    
+    .category-inputs{
+        // display: none;
+        position: absolute;
+        display: block;
+        background-color: black;
+        padding:0 15px ;
+        @include tablet{
+          position: relative;
+          background-color: transparent;
+          color: black;
+          width: 150px;
+        }
+        input{
+            margin: 5px;
+        }
+    }
+  }
+
+  .heading-sidebar{
+    display: flex;
+    border: 1px solid;
+    margin: 3px;
+    gap: 5px;
+    @include minitablet{
+      margin: .5em 0;
+      border: none;
+    }
+    h4{
+      font-weight: 500;
+      font-size: 11px;
+    }
+  }
+
+  .prices-filter {
+    background-color:black;
+    color: white;
+    width: 100px;
+    position: relative;
+    border-radius: 5px;
+    @include tablet{
+      background-color: transparent;
+      color: black;
+      width: 150px;
+    }
+  
+    .price-inputs {
+      position: absolute;
+      display: block;
+      background-color: black;
+      padding: 0 10px;
+      @include tablet{
+        position: relative;
+        background: transparent;
+        color: black;
+        width: 150px;
+      }
+  
+      label {
+        font-weight: 500;
+        font-size: 13px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: rgb(137, 131, 131);
+  
+        input {
+          margin: 0 5px;
+          width: 12px;
+          height: 12px;
+          border: 2px solid rgb(245, 80, 245);
+          border-radius: 50%;
+          outline: none;
+          cursor: pointer;
+          transition: border-color 0.3s ease;
+  
+          &:checked,&:focus,&:hover {
+            border-color: rgb(245, 80, 245);
+            outline: 2px solid #023f1c;
+            outline-offset: -5px;
+          }
+        }
+      }
+    }
+  }
+  

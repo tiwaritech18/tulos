@@ -1,0 +1,31 @@
+@import '../../styles/mixins';
+.offer-container{
+    display: flex;
+    flex-direction: column-reverse;
+    background-image:url('../Assets/offerImg.jpg');
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    padding: 4em;
+    margin-bottom: 120px;
+    align-items: center;
+    border-radius: 10px;
+    @include tablet{
+        flex-direction: row;
+    }
+
+    .offer-content-left{
+        // flex: 1;
+        width: 100%;
+        @include tablet{
+            flex: 1;
+        }
+        .offer-btn{
+            padding: 8px 15px;
+        }
+    }
+    .offer-content-right{
+        flex:1;
+    }
+
+}

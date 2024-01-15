@@ -1,0 +1,136 @@
+@import "../../styles/mixins";
+
+.footer{
+    padding-top: 1em;
+    border-top: 1px solid rgba(189, 177, 177, 0.489);
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .newsletter-container{
+        @include tablet {
+            margin-left: 2em;
+        }
+        @include desktop{
+            margin-left: 4em;
+        }
+        h1{
+            font-family: 'Genos', sans-serif;
+            margin-top: .5em;
+            @include tablet{
+                font-size: 65px;
+            }
+        }
+        h1, p{
+            text-align: center;
+            @include tablet{
+            text-align: left;
+        }
+        }
+        .subscribe-container{
+            // text-align: left;
+            margin-bottom: 2em;
+            input{
+                text-align: left;
+                padding: .6em 1.5em;
+                border-radius: 15px;
+                border: none;
+                outline: 1px solid rgba(173, 170, 170, 0.671);
+                margin:5px 10px;
+                @include tablet{
+                    margin: 0;
+                }
+            }
+            .submit-btn{
+                padding: 7px 25px;
+                @include tablet{
+                    margin-left: .5em;
+                }
+            }
+        }
+    }
+    .footer-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2em;
+        // padding: 2em;
+        @include tablet {
+            gap: 5rem;
+            margin-right: 2.5em
+        }
+    }
+    .copyright{
+        padding-top: 1em;
+        h5{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .4rem;
+            font-size: 15px;
+        }
+    }
+    .social-icons{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 1em;
+        .social-icon{
+            font-size: 20px;
+            color: rgba(18, 18, 232, 0.732);
+            &:hover{
+                color: rgba(0, 0, 121, 0.888);
+                
+            }
+        }
+    }
+}
+
+.footer-list{
+    @include desktop{
+        margin-right: 3rem;
+    }
+    h4{
+        letter-spacing: 0;
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+    h4, ul li{
+        text-align: left;
+    }
+    ul li{
+        font-size: 13px;
+        font-weight: 500;
+        color: gray;
+        @include tablet{
+            font-size: 14px;
+        }
+    }
+}
+.copyright-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+    background: black;
+    color: wheat;
+    .copyright h5 {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        @include tablet{
+            font-size: 14px;
+        }
+    }
+    .social-icons{
+        display: flex;
+        gap: 20px;
+        svg{
+            @include tablet{
+                font-size: 18px;
+            }
+        }
+    }
+}

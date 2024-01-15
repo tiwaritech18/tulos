@@ -1,0 +1,50 @@
+@import "../../styles/mixins";
+
+.collection {
+  margin: 120px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 35px;
+  }
+  p{
+    margin-bottom: 5em;
+  }
+
+  .collection-items {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    // Mobile styles (default)
+
+    @include tablet {
+     flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @include desktop {
+      display: flex;
+    //   border: 1px solid;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    //   margin: 10px auto;
+      padding-left: 100px;
+    }
+  }
+
+  .collection-item {
+    // Styles common to both tablet and desktop
+
+    @include desktop {
+      flex: 0 0 calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// mixins.scss
+ @mixin minitablet {
+    @media (min-width:458px) {
+        @content;
+    }
+ }
+ @mixin tablet {
+    @media (min-width:758px) {
+        @content;
+    }
+ }
+ @mixin desktop {
+    @media (min-width:1025px) {
+        @content;
+    }
+ }

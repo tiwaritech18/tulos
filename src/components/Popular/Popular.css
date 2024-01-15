@@ -1,0 +1,41 @@
+.collection {
+  margin: 120px 0;
+  text-align: center;
+}
+.collection h1 {
+  font-size: 35px;
+}
+.collection p {
+  margin-bottom: 5em;
+}
+.collection .collection-items {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 758px) {
+  .collection .collection-items {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1025px) {
+  .collection .collection-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1025px) {
+  .collection .collection-item {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+}/*# sourceMappingURL=Popular.css.map */

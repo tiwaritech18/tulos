@@ -1,0 +1,32 @@
+.offer-container {
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: url("../Assets/offerImg.jpg");
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 4em;
+  margin-bottom: 120px;
+  align-items: center;
+  border-radius: 10px;
+}
+@media (min-width: 758px) {
+  .offer-container {
+    flex-direction: row;
+  }
+}
+.offer-container .offer-content-left {
+  width: 100%;
+}
+@media (min-width: 758px) {
+  .offer-container .offer-content-left {
+    flex: 1;
+  }
+}
+.offer-container .offer-content-left .offer-btn {
+  padding: 8px 15px;
+}
+.offer-container .offer-content-right {
+  flex: 1;
+}/*# sourceMappingURL=Offer.css.map */

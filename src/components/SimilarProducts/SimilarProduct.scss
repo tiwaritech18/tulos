@@ -1,0 +1,10 @@
+@import "../../styles/mixins";
+
+.similar-products{
+    @include tablet {
+        margin: 5em 0;
+        .similar-product-items{
+            margin: 2.5em 0;
+    }
+    }
+}

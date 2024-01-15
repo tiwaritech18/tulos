@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.categories-container{
+    margin-bottom: 120px;
+    display: flex;
+    gap: 25px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    .categories{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        padding: 1em;
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+}
+.category{
+    height: 400px;
+    border-radius: 15px;
+    transition: $transition;
+    &:hover{
+        scale: 1.1;
+        // filter: blur(1px);
+    }
+    .category-banner{
+        height: 100%;
+        position: relative;
+        img{
+            object-fit: cover;
+            opacity: 0.95;
+            height: 100%;
+        }
+    }
+}
+.category-button{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    text-align: left;
+    h1{
+        font-size: 40px;
+    }
+    .detail-btn{
+        padding: 7px 24px;
+    }
+}
