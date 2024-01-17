@@ -63,7 +63,9 @@
         box-shadow: 100px 100px 160px 100px rgba(0,0,0,0.5);
         transition: $transition;
         .mobile-nav-header{
-            margin: 5px 10px;
+            margin: 50px 10px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.277);
+            padding-bottom: 5px;
             display: flex;
             justify-content: space-between;
             h5{
@@ -82,7 +84,9 @@
         li{
             font-weight: 700;
             font-size: 15px;
+            text-align: left;
             a{
+                margin:2em;
                 color: rgb(100, 97, 97);            }
             &:hover{
                 color: rgb(85, 82, 82);

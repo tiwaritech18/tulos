@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import Data from "../components/Assets/AllProducts";
 import Item from "../components/Item/Item";
 
@@ -6,10 +6,18 @@ const FilterContext = createContext();
 
 
 const FilterContextProvider = ({children}) => {
+    const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState(Data);
     const [price, setPrice] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            setLoading(false);
+        }
+        fetchData()
+    }, [])
     // ===== input filter
     const [query, setQuery] = useState('');
     const handleInputChange = (e) => {
@@ -89,6 +97,7 @@ const FilterContextProvider = ({children}) => {
     const filterResult = filteredData(products, selectedCategory, query, price);
 
     const contextValue = {
+                loading,
                 handleChange,
                 selectedCategory,
                 filterResult,

@@ -36,6 +36,7 @@ const Categories = () => {
     };
 
     return (
+        <>
         <div className='categories-container'>
             <div className="categories">
                 {categories.map((category) => (
@@ -47,6 +48,7 @@ const Categories = () => {
                 ))}
             </div>
         </div>
+                </>
     );
 };
 
