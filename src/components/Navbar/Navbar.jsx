@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiMenu, FiShoppingCart } from "react-icons/fi";
-import { FaFirefoxBrowser } from "react-icons/fa";
+import { FaFirefoxBrowser, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import Container from "../Container/Container"
 import "./Navbar.scss"
@@ -47,20 +47,39 @@ const Navbar = () => {
     <div className='navbar'>
         <div className="left-nav-content">
             <FiMenu onClick={handleShowMenu} title='menu' />
-            <ul className={showMenuList ? 'show-unordered-list' : 'unordered-list'}>
+            <ul className={showMenuList ? 'show-unordered-list' : 'unordered-list'}><li>
+                    <div className="mobile-nav-header">
+                        <h5>TULOS</h5>
+                        <IoMdClose className='close-icon' onClick={handleHideMenu} />
+                    </div>
+                </li>
                 {navlinks.map((link) => (
                 <li key={link.id}>
                     <Link to={link.to}>{link.title}</Link>
                 </li>
                 ))}
                 <li>
-                    <IoMdClose className='close-icon' onClick={handleHideMenu} />
+                    <div className="social-icons">
+                        <li>
+                            <FaInstagram />
+                        </li>
+                        <li>
+                            <FaTwitter />
+                        </li>
+                        <li>
+                            <FaGithub />
+                        </li>
+                    </div>
                 </li>
             </ul>
         </div>
-        <div className="brand">
-            <h3>TULOS</h3>
-        </div>
+        
+            <div className="brand">
+            <Link to='/'>
+                <h3>TULOS</h3>
+            </Link>
+            </div>
+        
         <div className="right-nav-content">
             <Link to='/browse'>
                 <FaFirefoxBrowser title='browse'/>
