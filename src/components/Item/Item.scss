@@ -68,6 +68,10 @@
     padding-right: 15px;
     cursor: pointer;
     transition: $transition;
+    @include minitablet {
+        padding: 0;
+        justify-content: center;
+    }
     &:hover{
         color: rgb(226, 48, 48);
     }
