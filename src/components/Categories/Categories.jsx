@@ -37,18 +37,18 @@ const Categories = () => {
 
     return (
         <>
-        <div className='categories-container'>
-            <div className="categories">
-                {categories.map((category) => (
-                    <Link to={category.to} key={category.id}>
-                        <div className="category" onClick={handleCategoryClick}>
-                            <Category {...category} />
-                        </div>
-                    </Link>
-                ))}
+            <div className='categories-container'>
+                <div className="categories">
+                    {categories.map((category) => (
+                        <Link to={category.to} key={category.id}>
+                            <div className="category" onClick={handleCategoryClick}>
+                                <Category {...category} />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
             </div>
-        </div>
-                </>
+        </>
     );
 };
 

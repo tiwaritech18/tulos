@@ -2,7 +2,9 @@
 @import './styles//mixins';
 
 // Global Styles
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,7 +25,10 @@ body {
     text-decoration: none;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     letter-spacing: $spacing;
     text-transform: capitalize;
     line-height: 1.25;
@@ -45,7 +50,8 @@ body {
   h4 {
     font-size: 0.875rem;
   }
-  img{
+
+  img {
     max-width: 100%;
     height: auto;
   }
@@ -76,7 +82,10 @@ body {
       font-size: 1rem;
     }
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       line-height: 1;
     }
   }
@@ -94,20 +103,22 @@ body {
   }
 }
 
-.button{
-   font-weight: 600;
-            color: white;
-            cursor: pointer;
-            border-radius: 15px;
-            background: black;
-            transition: $transition;
-            border: 1px solid rgb(112, 111, 111);
-            &:hover{
-              background-color: white;
-              color: black;
-          }
+.button {
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  background: black;
+  transition: $transition;
+  border: 1px solid rgb(112, 111, 111);
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
-.countdown{
+
+.countdown {
   background: black;
   color: white;
   display: flex;
@@ -117,62 +128,73 @@ body {
   padding-top: 1.3em;
   height: 35px;
   width: 100%;
-  .offer{
+
+  .offer {
     color: white;
     font-size: 11px;
+
     @include tablet {
       font-size: 12px;
     }
   }
 }
 
-.countdown-timer{
+.countdown-timer {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-bottom: 1.85em;
   color: white;
   font-size: 12px;
   font-weight: 600;
-  @include tablet{
+
+  @include tablet {
     font-size: 13px;
-    
+
     font-weight: 700;
   }
 }
-.path{
- 
+
+.path {
+
   // padding: 1em;
   text-align: left;
-  a{
+
+  a {
     color: rgb(145, 145, 145);
     font-weight: 500;
   }
-  span{
+
+  span {
     color: black;
     font-weight: 700;
   }
 }
-.rating{
+
+.rating {
   display: flex;
   align-items: center;
-  padding-bottom: 1em ;
+  padding-bottom: 1em;
   gap: 2px;
-  span{
+
+  span {
     margin-left: 6px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
   }
 }
-.size{
+
+.size {
   text-align: left;
   margin-bottom: 12px;
-  .size-item{
+
+  .size-item {
     font-weight: 600;
     margin: 5px;
     padding: 5px 9px;
     border: 1px solid gray;
     border-radius: 6px;
   }
-  .active{
+
+  .active {
     background: black;
     color: white;
   }

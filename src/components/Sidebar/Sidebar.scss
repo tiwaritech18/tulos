@@ -34,8 +34,8 @@
         transition: border-color 0.3s ease;
         &:checked,&:focus,&:hover {
           border-color: rgb(245, 80, 245);
-          outline: 2px solid #023f1c;
-          outline-offset: -5px;
+            outline: 2px solid rgb(245, 80, 245);
+            outline-offset: -5px;
         }
         @include tablet{
           appearance: auto;
@@ -134,7 +134,7 @@
   
           &:checked,&:focus,&:hover {
             border-color: rgb(245, 80, 245);
-            outline: 2px solid #023f1c;
+            outline: 2px solid rgb(245, 80, 245);
             outline-offset: -5px;
           }
         }

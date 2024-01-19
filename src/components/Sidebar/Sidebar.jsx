@@ -6,6 +6,7 @@ import { useFilterContext } from '../../Context/FilterContext';
 import { BiCategory } from "react-icons/bi";
 import { IoPricetagsOutline } from "react-icons/io5";
 import FilterOption from './FilterOptions';
+import { useLoadingContext } from '../../Context/LoadingContext';
 
 const categories = ["bag", "shoe", "cloth", "glass"];
 const prices = [1, 51, 101, 151];
@@ -16,6 +17,16 @@ const Sidebar = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 760);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [showPriceDropdown, setShowPriceDropdown] = useState(false);
+  const {loading, setLoading} = useLoadingContext();
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setLoading(false);
+    }
+    fetchData();
+  },[handleChange])
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,8 +45,6 @@ const Sidebar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [isDesktop]);
-
-  
 
   return (
     <div className='sidebar'>

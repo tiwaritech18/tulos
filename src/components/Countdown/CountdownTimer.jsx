@@ -35,9 +35,9 @@ const CountdownTimer = ({ initialDuration, delay }) => {
   };
 
   return (
-    <div className='countdown'>    
-    <p className='offer'>Get 25% Off This Summer Sale. Grab It Fast!!!</p>
-    <p className='countdown-timer'>{formatTime(duration)}</p>
+    <div className='countdown'>
+      <p className='offer'>Get 25% Off This Summer Sale. Grab It Fast!!!</p>
+      <p className='countdown-timer'>{formatTime(duration)}</p>
     </div>
   );
 };

@@ -12,39 +12,41 @@ import { useShopContext } from './Context/ShopContext'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Browse from './pages/Browse'
+import Login from './components/Login/Login'
 
 
 function App() {
-  const {toastMsg, toast ,showToast} = useShopContext();
+  const { toastMsg, toast, showToast } = useShopContext();
 
   return (
     <>
       <BrowserRouter>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-      <CountdownTimer initialDuration={86400} delay={60} />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <CountdownTimer initialDuration={86400} delay={60} />
         <Navbar />
         <Routes>
-            <Route path='/' element={<Shop />} />
-            <Route path='/man' element={<ShopCategory category='man' />} />
-            <Route path='/women' element={<ShopCategory category='women' />} />
-            <Route path='/kid' element={<ShopCategory category='kid' />} />
-            <Route path='/browse' element={<Browse />} />            
-            <Route path='/product' element={<Product />}>
-               <Route path=':productId' element={<Product />} />
-            </Route>
-            <Route path="/cart" element={<Cart />} />
-            <Route path='/loginsignup' element={<LoginSignUp />}/>
+          <Route path='/' element={<Shop />} />
+          <Route path='/man' element={<ShopCategory category='man' />} />
+          <Route path='/women' element={<ShopCategory category='women' />} />
+          <Route path='/kid' element={<ShopCategory category='kid' />} />
+          <Route path='/browse' element={<Browse />} />
+          <Route path='/product' element={<Product />}>
+            <Route path=':productId' element={<Product />} />
+          </Route>
+          <Route path="/cart" element={<Cart />} />
+          <Route path='/loginsignup' element={<LoginSignUp />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

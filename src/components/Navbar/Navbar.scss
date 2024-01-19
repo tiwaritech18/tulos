@@ -1,149 +1,177 @@
-@import '../../styles/variables' ;
+@import '../../styles/variables';
 @import '../../styles//mixins';
 
-.navbar{
+.navbar {
     display: flex;
     padding: .8em 0;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
     border-bottom: 1px solid rgb(232, 227, 227);
 
     .brand {
-        h3{
+        h3 {
             font-family: 'Genos', sans-serif;
             font-weight: 600;
             font-size: 20px;
             margin-top: 4px;
             cursor: pointer;
             color: black;
-            @include tablet{
+
+            @include tablet {
                 font-size: 25px;
             }
         }
     }
-    @include tablet{
-        .left-nav-content{
+
+    @include tablet {
+        .left-nav-content {
             padding-left: 1em;
-            .unordered-list{
+
+            .unordered-list {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+
                 // @include tablet{
                 //     display: none;
                 // }
-                li a{
+                li a {
                     font-weight: 600;
                     color: black;
                     cursor: pointer;
                     transition: $transition;
-                    &:hover,&:active{
+
+                    &:hover,
+                    &:active {
                         color: rgb(100, 97, 97);
                         scale: 1.1;
                     }
                 }
             }
-            svg{
+
+            svg {
                 display: none;
                 cursor: pointer;
             }
         }
     }
-    .show-unordered-list{
+
+    .show-unordered-list {
         flex-direction: column;
         gap: 1rem;
         display: flex;
-        justify-content: center;
-        position: absolute;
+        // justify-content: center;
+        position: fixed;
         left: 0;
         top: 0;
         width: 250px;
         height: 100vh;
         background: rgb(242, 236, 236);
         z-index: 999;
-        box-shadow: 100px 100px 160px 100px rgba(0,0,0,0.5);
+        box-shadow: 100px 100px 160px 100px rgba(0, 0, 0, 0.5);
         transition: $transition;
-        .mobile-nav-header{
-            margin: 50px 10px;
+
+        .mobile-nav-header {
+            margin: 20px 10px;
             border-bottom: 1px solid rgba(128, 128, 128, 0.277);
             padding-bottom: 5px;
             display: flex;
             justify-content: space-between;
-            h5{
-                color: rgb(229, 75, 229);
+
+            .nav-heading {
+                display: none;
             }
         }
-        .social-icons{
+
+        .social-icons {
             margin: 13em 10px;
             display: flex;
             gap: 1em;
             justify-content: center;
-            svg{
+
+            svg {
                 color: rgba(123, 0, 123, 0.768);
             }
         }
-        li{
+
+        li {
             font-weight: 700;
             font-size: 15px;
             text-align: left;
-            a{
-                margin:2em;
-                color: rgb(100, 97, 97);            }
-            &:hover{
+
+            a {
+                margin: 2em;
+                color: rgb(100, 97, 97);
+            }
+
+            &:hover {
                 color: rgb(85, 82, 82);
             }
         }
-        .close-icon{
+
+        .close-icon {
             font-size: 20px;
             cursor: pointer;
         }
     }
-    .unordered-list{
+
+    .unordered-list {
         display: none;
     }
-    .right-nav-content{
+
+    .right-nav-content {
         display: flex;
         align-items: center;
         gap: 1rem;
-        svg{
+
+        svg {
             color: black;
             margin-top: 8px;
             transition: $transition;
-            &:hover{
+
+            &:hover {
                 color: gray;
             }
         }
+
         @include tablet {
             gap: 1.5rem;
             font-size: 17px;
             margin-right: 20px;
         }
-        .search-icon{
+
+        .search-icon {
             cursor: pointer;
         }
+
         .cart-icon {
             position: relative;
             // border: 1px solid;
             cursor: pointer;
-            svg{
+
+            svg {
                 margin-top: 8px;
                 color: black;
                 transition: $transition;
-                &:hover{
+
+                &:hover {
                     color: gray;
                 }
             }
-            .product-counter{
+
+            .product-counter {
                 position: absolute;
                 top: -5px;
                 right: -7px;
                 font-size: 10px;
-                padding:0 2.8px;
+                padding: 0 2.8px;
                 color: white;
                 background: #fb5353;
                 border-radius: 50%;
             }
         }
-        .login-btn{
+
+        .login-btn {
             border: none;
             padding: 5px 15px;
             outline: 1px solid black;
@@ -152,16 +180,19 @@
             margin-bottom: 3px;
             cursor: pointer;
             transition: $transition;
-            a{
+
+            a {
                 color: black;
             }
-            &:hover{
+
+            &:hover {
                 color: rgb(100, 97, 97);
                 scale: 1.1;
             }
+
             @include tablet {
-            font-size: 14px;
+                font-size: 14px;
+            }
         }
     }
-}
 }

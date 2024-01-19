@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiMenu, FiShoppingCart } from "react-icons/fi";
 import { FaFirefoxBrowser, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { CgEventbrite } from "react-icons/cg";
+
 import { IoMdClose } from "react-icons/io";
 import Container from "../Container/Container"
 import "./Navbar.scss"
@@ -49,12 +51,12 @@ const Navbar = () => {
             <FiMenu onClick={handleShowMenu} title='menu' />
             <ul className={showMenuList ? 'show-unordered-list' : 'unordered-list'}><li>
                     <div className="mobile-nav-header">
-                        <h5>TULOS</h5>
+                        <CgEventbrite />
                         <IoMdClose className='close-icon' onClick={handleHideMenu} />
                     </div>
                 </li>
                 {navlinks.map((link) => (
-                <li key={link.id}>
+                <li key={link.id} onClick={handleHideMenu}>
                     <Link to={link.to}>{link.title}</Link>
                 </li>
                 ))}

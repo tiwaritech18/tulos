@@ -73,19 +73,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:1rem;
     input{
         padding: .7em 1em;
         border: 1px solid gray;
         text-align: left;
         font-size: 12px;
         width: 91%;
+        margin-top: 1rem;
         border-radius: 8px;
     }
     .sign-up-btn{
         padding: 8px 0;
         width: 90%;
         border-radius: 8px;
+        margin-top: 1rem;
+
     }
 }
 
@@ -97,3 +99,36 @@
 hr{
     margin-top: 1em;
 }
+
+.not-exist{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    background-color: #ff5555;
+    font-weight: 800;
+    padding: 12px;
+    @include minitablet{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.error{
+    display: none;
+}
+
+    .error.danger{
+        display: flex;
+        width: 85%;
+        text-align: left;
+        display: inline;
+        font-size:9px;
+        color: #ff5555;
+        font-weight: bold;
+        margin: 0;padding: 0;
+        sup{
+            font-size: 12px;
+        }
+    }
