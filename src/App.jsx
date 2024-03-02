@@ -8,15 +8,15 @@ import LoginSignUp from './pages/LoginSignup'
 import Footer from './components/Footer/Footer'
 import CountdownTimer from './components/Countdown/CountdownTimer'
 import Cart from './pages/Cart'
-import { useShopContext } from './Context/ShopContext'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Browse from './pages/Browse'
 import Login from './components/Login/Login'
+import Chatbot from './components/Chatbot/Chatbot'
 
 
 function App() {
-  const { toastMsg, toast, showToast } = useShopContext();
+
 
   return (
     <>
@@ -49,6 +49,7 @@ function App() {
           <Route path='/login' element={<Login />} />
         </Routes>
         <Footer />
+        <Chatbot/>
       </BrowserRouter>
     </>
   )
