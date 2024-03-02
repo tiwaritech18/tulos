@@ -1,13 +1,17 @@
+@import "../../styles/mixins";
+
 .chatbot-interface{
-  height: 700px;
+  height: 400px;
   position: fixed;
   width: 400px;
   bottom: 0;
   right: 0;
-  height: 500px;
   background-color: white;
   border-radius: 20px;
   padding:.5rem 1rem ;
+  @include minitablet{
+    height: 500px;
+  }
 }
 #chatbot-frame{
   width:100%;
@@ -24,7 +28,7 @@
   border-radius: 50%;
   animation: bounce 1s ease-in-out infinite alternate;
 }
-#close-chat:hover{
+#close-chat,#support-icon:hover{
   animation:pause 1s ease;
 }
 
@@ -33,6 +37,15 @@
   bottom: 10px;
   right: 20px;
   font-size: 30px;
+  animation: bounceSupportIcon .7s ease-in-out infinite alternate;
+}
+@keyframes bounceSupportIcon{
+  0%{
+    bottom: 20px;
+  }
+  100%{
+    bottom: 10px;
+  }
 }
 @keyframes bounce{
   0%{
