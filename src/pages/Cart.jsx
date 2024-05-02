@@ -6,7 +6,7 @@ import "./PagesStyles/Cart.scss";
 import { useShopContext } from '../Context/ShopContext';
 import { Link } from 'react-router-dom';
 import EmptyCart from '../components/Emptycart/EmptyCart';
-
+import LazyImg from "../components/LazyLoading/Img"
 
 
 const Cart = () => {
@@ -51,7 +51,7 @@ const Cart = () => {
             {cartItems.length === 0 ? <EmptyCart /> : cartItems.map((item) => (
                 <div className="cart-item-container" key={item.id}>
                     <div className="cart-item">
-                        <img src={item.imgSrc} alt={item.name} />
+                        <LazyImg src={item.imgSrc} alt={item.name} />
                         <div className="cart-item-details">
                             <h5>{item.name} x{item.quantity}</h5>
                             <p>price: ${item.price}.00</p>
@@ -59,9 +59,9 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className="item-quantity">
-                        <span onClick={() => decreaseQuantity(item)}>-</span>
+                        <button style={{padding:'2px 6px', cursor:'pointer', fontSize:'20px',border:'none'}} onClick={() => decreaseQuantity(item)}>-</button>
                         <span>{item.quantity}</span>
-                        <span onClick={() => increaseQuantity(item)}>+</span>
+                        <button style={{padding:'2px 6px', cursor:'pointer', fontSize:'20px',border:'none'}} onClick={() => increaseQuantity(item)}>+</button>
                     </div>
                     <div className="item-total">
                         <p>${item.price * item.quantity}</p>

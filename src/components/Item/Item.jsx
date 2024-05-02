@@ -3,6 +3,7 @@ import "./Item.scss"
 import { Link } from 'react-router-dom'
 import { FaRegHeart } from "react-icons/fa";
 import { useShopContext } from '../../Context/ShopContext';
+import LazyImg from '../LazyLoading/Img';
 
 
 const Item = ({ id, name, description, imgSrc, price }) => {
@@ -16,7 +17,7 @@ const Item = ({ id, name, description, imgSrc, price }) => {
 
       <div className="single-item">
         <div className="item-img" onClick={handleScroll}>
-          <Link to={`/product/${id}`}><img src={imgSrc} alt="" /></Link>
+          <Link to={`/product/${id}`}><LazyImg src={imgSrc} alt="" /></Link>
         </div>
         <div className="item-details">
           <p className='item-name'>{name}</p>

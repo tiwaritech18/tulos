@@ -4,24 +4,24 @@ import Container from '../Container/Container'
 import StarRating from '../Rating/StarRating'
 import Size from '../Size/Size'
 import { useShopContext } from '../../Context/ShopContext'
-
+import LazyImg from "../LazyLoading/Img"
 
 const ProductDisplay = ({ product }) => {
 
   const { addToCart } = useShopContext();
   // console.log(toastMsg)
-
+const smallImgs = new Array(4).fill(0);
+console.log(smallImgs);
   return (
     <Container>
 
       <div className='product-container'>
         <div className="product-img">
-          <img className='main-img' src={product.imgSrc} alt="" />
+          <LazyImg className='main-img' src={product.imgSrc} alt="" />
           <div className="product-alternate-imgs">
-            <img src={product.imgSrc} alt="" />
-            <img src={product.imgSrc} alt="" />
-            <img src={product.imgSrc} alt="" />
-            <img src={product.imgSrc} alt="" />
+            {smallImgs.map((i) => {
+              return <LazyImg src={product.imgSrc} alt="image"/>
+            })}
           </div>
         </div>
 
