@@ -1,6 +1,5 @@
-import React from 'react'
 import "./Categories.scss"
-import Img from '../LazyLoading/Img'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Category = ({ imgSrc, title}) => {
 
