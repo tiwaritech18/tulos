@@ -7,12 +7,10 @@ import { useLoadingContext } from '../Context/LoadingContext';
 import { ClipLoader } from 'react-spinners';
 import { useLocation } from 'react-router-dom';
 
-
 const ShopCategory = (props) => {
   const {Data} = useShopContext();
   const {loading, setLoading} = useLoadingContext();
   const location = useLocation();
-
   useEffect(() => {
     setLoading(true)
     const fetchData = async () => {
@@ -22,13 +20,11 @@ const ShopCategory = (props) => {
     fetchData();
   },[location.pathname])
 
-
   return (
 <div className='shop-category-container'>
     <div className="shop-category-header">
       <Breadcrumb />
     </div>
-    
       <div className="shop-category">
         {loading ? (
           <div className="loader">
@@ -48,8 +44,6 @@ const ShopCategory = (props) => {
         }))}
       </div>
       </div>
-  
   )
 }
-
 export default ShopCategory
