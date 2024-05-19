@@ -10,11 +10,9 @@ import { useLocation } from 'react-router-dom';
 
 
 const Browse = () => {
-
   const { handleInputChange, filterResult } = useFilterContext();
   const { loading, setLoading } = useLoadingContext();
   const location = useLocation();
-
   useEffect(() => {
     setLoading(true)
     const fetchData = async () => {
@@ -35,7 +33,6 @@ const Browse = () => {
           <CiSearch />
         </div>
       </div>
-
       <>
         <div className="page-header">
           <Breadcrumb />
@@ -62,5 +59,4 @@ const Browse = () => {
     </div>
   );
 };
-
 export default Browse;
