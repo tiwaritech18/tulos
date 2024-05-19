@@ -49,7 +49,6 @@ const LoginSignup = () => {
     setError({ ...error, password: '' }); // Clear the password error
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, password } = state;
